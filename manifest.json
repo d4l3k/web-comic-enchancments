@@ -1,0 +1,16 @@
+{
+  "name": "Webcomic Navigation Enhancements",
+  "version": "0.1",
+  "manifest_version": 2,
+  "description": "Adds basic arrow key movements & automatically scrolls down to the comic. Supports: El Goonish Shive, General Protection Fault, White Noise, Ctrl+Alt+Delete, Menage a 3, Vampire Cheerleaders, Questionable Content & The Wotch.",
+  "content_scripts": [
+    {
+      "matches": ["http://www.egscomics.com/*","http://www.thewotch.com/*","http://www.gpf-comics.com/*","http://www.wncomic.com/*","http://www.cad-comic.com/*","http://www.ma3comic.com/*","http://www.vampirecheerleaders.net/*","http://twentyfirstcenturycoeds.comicgenesis.com/*","http://www.dominic-deegan.com/*","http://questionablecontent.net/*"],
+      "js": ["prototype.compressed.js", "navigation.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "notifications"
+  ]
+}
